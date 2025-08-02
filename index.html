@@ -1,0 +1,333 @@
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>The Ultimate Guide to Software Deployment Strategies</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700;900&display=swap" rel="stylesheet">
+    <style>
+        body {
+            font-family: 'Inter', sans-serif;
+        }
+        .gradient-text {
+            background: linear-gradient(to right, #4f46e5, #ec4899);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+        }
+        .strategy-card-link {
+            background-color: rgba(255, 255, 255, 0.05);
+            border: 1px solid rgba(255, 255, 255, 0.1);
+            backdrop-filter: blur(10px);
+            -webkit-backdrop-filter: blur(10px);
+            display: block;
+            text-decoration: none;
+        }
+        /* Hide sections by default */
+        .page-section {
+            display: none;
+        }
+        /* Show the active section */
+        .page-section.active {
+            display: block;
+        }
+    </style>
+</head>
+<body class="bg-gray-900 text-gray-200">
+
+    <!-- Header Section -->
+    <header class="text-center py-16 px-4 bg-gray-900">
+        <h1 class="text-4xl md:text-6xl font-black tracking-tight gradient-text">The Ultimate Guide to</h1>
+        <h2 class="text-4xl md:text-6xl font-black tracking-tight text-white mt-2">Software Deployment Strategies</h2>
+        <p class="mt-6 max-w-3xl mx-auto text-lg text-gray-400">Master the art of releasing software. Understand the pros, cons, and best use-cases for the most popular deployment methods.</p>
+    </header>
+
+    <!-- Main Content -->
+    <main class="container mx-auto px-4 sm:px-6 lg:px-8 py-12">
+
+        <!-- Grid of Strategies (Home Page) -->
+        <div id="strategy-grid" class="page-section">
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-2 gap-8 md:gap-12">
+
+                <!-- Strategy 1: Big Bang Deployment Card -->
+                <a href="#big-bang" class="strategy-card-link rounded-2xl p-8 shadow-2xl transform hover:scale-105 transition-transform duration-300">
+                    <div class="flex items-center gap-4">
+                        <div class="bg-red-500/20 p-3 rounded-full">
+                            <svg xmlns="http://www.w3.org/2000/svg" class="h-8 w-8 text-red-400" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 10V3L4 14h7v7l9-11h-7z" /></svg>
+                        </div>
+                        <h3 class="text-3xl font-bold text-white">Big Bang</h3>
+                    </div>
+                    <p class="mt-4 text-gray-400">The "all-or-nothing" approach. The new version replaces the old one in a single, swift event.</p>
+                    <div class="mt-6">
+                        <h4 class="font-semibold text-lg text-white mb-3">How It Works</h4>
+                        <div class="bg-gray-800 p-4 rounded-lg flex items-center justify-around text-center">
+                            <div class="flex flex-col items-center">
+                                <div class="w-16 h-16 rounded-full bg-blue-500 flex items-center justify-center font-bold text-white text-sm">Old Ver.</div>
+                                <span class="mt-2 text-xs text-gray-400">Before</span>
+                            </div>
+                            <svg xmlns="http://www.w3.org/2000/svg" class="h-8 w-8 text-red-400 mx-4" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 8l4 4m0 0l-4 4m4-4H3" /></svg>
+                            <div class="flex flex-col items-center">
+                                <div class="w-16 h-16 rounded-full bg-red-500 flex items-center justify-center font-bold text-white text-sm">New Ver.</div>
+                                 <span class="mt-2 text-xs text-gray-400">After</span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="mt-6 grid grid-cols-1 sm:grid-cols-2 gap-4">
+                        <div>
+                            <h4 class="font-semibold text-green-400 mb-2">Pros</h4><ul class="space-y-2 text-sm text-gray-300"><li class="flex items-start"><svg class="h-5 w-5 text-green-400 mr-2 flex-shrink-0" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7" /></svg>Simple & Fast</li></ul>
+                        </div>
+                        <div>
+                            <h4 class="font-semibold text-red-400 mb-2">Cons</h4><ul class="space-y-2 text-sm text-gray-300"><li class="flex items-start"><svg class="h-5 w-5 text-red-400 mr-2 flex-shrink-0" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12" /></svg>High Risk & Downtime</li></ul>
+                        </div>
+                    </div>
+                    <div class="mt-6 bg-red-900/50 text-red-300 p-3 rounded-lg text-sm"><p><strong class="font-bold">Best For:</strong> Non-critical apps, initial launches.</p></div>
+                </a>
+
+                <!-- Strategy 2: Rolling Deployment Card -->
+                <a href="#rolling" class="strategy-card-link rounded-2xl p-8 shadow-2xl transform hover:scale-105 transition-transform duration-300">
+                    <div class="flex items-center gap-4">
+                         <div class="bg-purple-500/20 p-3 rounded-full">
+                            <svg xmlns="http://www.w3.org/2000/svg" class="h-8 w-8 text-purple-400" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 4v5h.582m15.356 2A8.001 8.001 0 004.582 9m0 0H9m11 11v-5h-.581m0 0a8.003 8.003 0 01-15.357-2m15.357 2H15" /></svg>
+                        </div>
+                        <h3 class="text-3xl font-bold text-white">Rolling</h3>
+                    </div>
+                    <p class="mt-4 text-gray-400">A gradual, wave-like update. The new version slowly replaces the old across server instances.</p>
+                    <div class="mt-6">
+                        <h4 class="font-semibold text-lg text-white mb-3">How It Works</h4>
+                        <div class="bg-gray-800 p-4 rounded-lg flex items-center justify-around text-center space-x-2">
+                            <div class="w-10 h-10 rounded-full bg-blue-500 flex-shrink-0"></div><div class="w-10 h-10 rounded-full bg-blue-500 flex-shrink-0"></div>
+                            <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6 text-purple-400" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 8l4 4m0 0l-4 4m4-4H3" /></svg>
+                            <div class="w-10 h-10 rounded-full bg-purple-500 flex-shrink-0"></div><div class="w-10 h-10 rounded-full bg-blue-500 flex-shrink-0"></div>
+                            <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6 text-purple-400" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 8l4 4m0 0l-4 4m4-4H3" /></svg>
+                            <div class="w-10 h-10 rounded-full bg-purple-500 flex-shrink-0"></div><div class="w-10 h-10 rounded-full bg-purple-500 flex-shrink-0"></div>
+                        </div>
+                    </div>
+                    <div class="mt-6 grid grid-cols-1 sm:grid-cols-2 gap-4">
+                        <div>
+                            <h4 class="font-semibold text-green-400 mb-2">Pros</h4><ul class="space-y-2 text-sm text-gray-300"><li class="flex items-start"><svg class="h-5 w-5 text-green-400 mr-2 flex-shrink-0" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7" /></svg>Low Downtime</li></ul>
+                        </div>
+                        <div>
+                            <h4 class="font-semibold text-red-400 mb-2">Cons</h4><ul class="space-y-2 text-sm text-gray-300"><li class="flex items-start"><svg class="h-5 w-5 text-red-400 mr-2 flex-shrink-0" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12" /></svg>Slow Rollout</li></ul>
+                        </div>
+                    </div>
+                    <div class="mt-6 bg-purple-900/50 text-purple-300 p-3 rounded-lg text-sm"><p><strong class="font-bold">Best For:</strong> High-availability apps.</p></div>
+                </a>
+
+                <!-- Strategy 3: Blue-Green Deployment Card -->
+                <a href="#blue-green" class="strategy-card-link rounded-2xl p-8 shadow-2xl transform hover:scale-105 transition-transform duration-300">
+                    <div class="flex items-center gap-4">
+                        <div class="bg-blue-500/20 p-3 rounded-full">
+                            <svg xmlns="http://www.w3.org/2000/svg" class="h-8 w-8 text-blue-400" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M8 7h12m0 0l-4-4m4 4l-4 4m0 6H4m0 0l4 4m-4-4l4-4" /></svg>
+                        </div>
+                        <h3 class="text-3xl font-bold text-white">Blue/Green</h3>
+                    </div>
+                    <p class="mt-4 text-gray-400">A tale of two identical environments. Traffic instantly switches from the old (Blue) to the new (Green).</p>
+                    <div class="mt-6">
+                        <h4 class="font-semibold text-lg text-white mb-3">How It Works</h4>
+                        <div class="bg-gray-800 p-4 rounded-lg flex items-center justify-around text-center">
+                            <div class="flex flex-col items-center"><div class="w-16 h-16 rounded-lg bg-blue-500 flex items-center justify-center font-bold text-white text-sm">Blue (Live)</div></div>
+                            <div class="flex flex-col items-center"><div class="w-16 h-16 rounded-lg bg-green-500 flex items-center justify-center font-bold text-white text-sm">Green (Idle)</div></div>
+                        </div>
+                        <div class="text-center my-2 text-gray-400">&darr; Router Switch &darr;</div>
+                         <div class="bg-gray-800 p-4 rounded-lg flex items-center justify-around text-center">
+                            <div class="flex flex-col items-center"><div class="w-16 h-16 rounded-lg bg-blue-500 opacity-50 flex items-center justify-center font-bold text-white text-sm">Blue (Idle)</div></div>
+                            <div class="flex flex-col items-center"><div class="w-16 h-16 rounded-lg bg-green-500 flex items-center justify-center font-bold text-white text-sm">Green (Live)</div></div>
+                        </div>
+                    </div>
+                    <div class="mt-6 grid grid-cols-1 sm:grid-cols-2 gap-4">
+                        <div>
+                            <h4 class="font-semibold text-green-400 mb-2">Pros</h4><ul class="space-y-2 text-sm text-gray-300"><li class="flex items-start"><svg class="h-5 w-5 text-green-400 mr-2 flex-shrink-0" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7" /></svg>Zero Downtime</li></ul>
+                        </div>
+                        <div>
+                            <h4 class="font-semibold text-red-400 mb-2">Cons</h4><ul class="space-y-2 text-sm text-gray-300"><li class="flex items-start"><svg class="h-5 w-5 text-red-400 mr-2 flex-shrink-0" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12" /></svg>Expensive</li></ul>
+                        </div>
+                    </div>
+                     <div class="mt-6 bg-blue-900/50 text-blue-300 p-3 rounded-lg text-sm"><p><strong class="font-bold">Best For:</strong> Mission-critical applications.</p></div>
+                </a>
+
+                <!-- Strategy 4: Canary Deployment -->
+                <a href="#canary" class="strategy-card-link rounded-2xl p-8 shadow-2xl transform hover:scale-105 transition-transform duration-300">
+                    <div class="flex items-center gap-4">
+                        <div class="bg-yellow-500/20 p-3 rounded-full">
+                           <svg xmlns="http://www.w3.org/2000/svg" class="h-8 w-8 text-yellow-400" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2"><path stroke-linecap="round" stroke-linejoin="round" d="M15 12a3 3 0 11-6 0 3 3 0 016 0z" /><path stroke-linecap="round" stroke-linejoin="round" d="M2.458 12C3.732 7.943 7.523 5 12 5c4.478 0 8.268 2.943 9.542 7-1.274 4.057-5.064 7-9.542 7-4.477 0-8.268-2.943-9.542-7z" /></svg>
+                        </div>
+                        <h3 class="text-3xl font-bold text-white">Canary</h3>
+                    </div>
+                    <p class="mt-4 text-gray-400">The safest bet. Release the new version to a small subset of users first, then gradually expand.</p>
+                    <div class="mt-6">
+                        <h4 class="font-semibold text-lg text-white mb-3">How It Works</h4>
+                        <div class="bg-gray-800 p-4 rounded-lg flex flex-col space-y-3">
+                            <div class="flex items-center justify-between"><span class="text-sm font-semibold text-yellow-300">Phase 1: 5%</span><div class="w-full h-4 bg-gray-700 rounded-full"><div class="h-4 bg-yellow-400 rounded-full" style="width: 5%"></div></div></div>
+                            <div class="flex items-center justify-between"><span class="text-sm font-semibold text-yellow-300">Phase 2: 50%</span><div class="w-full h-4 bg-gray-700 rounded-full"><div class="h-4 bg-yellow-400 rounded-full" style="width: 50%"></div></div></div>
+                            <div class="flex items-center justify-between"><span class="text-sm font-semibold text-yellow-300">Phase 3: 100%</span><div class="w-full h-4 bg-gray-700 rounded-full"><div class="h-4 bg-yellow-400 rounded-full" style="width: 100%"></div></div></div>
+                        </div>
+                    </div>
+                    <div class="mt-6 grid grid-cols-1 sm:grid-cols-2 gap-4">
+                        <div>
+                            <h4 class="font-semibold text-green-400 mb-2">Pros</h4><ul class="space-y-2 text-sm text-gray-300"><li class="flex items-start"><svg class="h-5 w-5 text-green-400 mr-2 flex-shrink-0" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7" /></svg>Safest Rollout</li></ul>
+                        </div>
+                        <div>
+                            <h4 class="font-semibold text-red-400 mb-2">Cons</h4><ul class="space-y-2 text-sm text-gray-300"><li class="flex items-start"><svg class="h-5 w-5 text-red-400 mr-2 flex-shrink-0" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12" /></svg>Slowest Rollout</li></ul>
+                        </div>
+                    </div>
+                     <div class="mt-6 bg-yellow-900/50 text-yellow-300 p-3 rounded-lg text-sm"><p><strong class="font-bold">Best For:</strong> Large-scale, high-risk applications.</p></div>
+                </a>
+            </div>
+        </div>
+
+        <!-- Detail Pages -->
+        <div id="big-bang" class="page-section">
+            <a href="#" class="inline-flex items-center gap-2 text-indigo-400 hover:text-indigo-300 mb-8">&larr; Back to all strategies</a>
+            <h2 class="text-4xl font-bold text-white">Big Bang Deployment</h2>
+            <p class="mt-4 text-lg text-gray-400">The "all-or-nothing" approach. It involves replacing the old version of the application with the new version all at once.</p>
+            
+            <div class="mt-8 bg-gray-800/50 p-6 rounded-2xl">
+                <h3 class="font-semibold text-xl text-white mb-4">Core Philosophy</h3>
+                <p class="text-gray-300 mb-6">The guiding principle is simplicity and speed. The entire change is treated as a single, atomic unit. It either succeeds completely or fails completely. This avoids the complexity of managing multiple concurrent versions.</p>
+                
+                <h3 class="font-semibold text-xl text-white mb-4">Deployment Timeline</h3>
+                <div class="relative border-l-2 border-red-500/50 ml-3">
+                    <div class="mb-8 ml-8">
+                        <span class="absolute flex items-center justify-center w-6 h-6 bg-gray-700 rounded-full -left-3 ring-8 ring-gray-900"><svg class="w-3 h-3 text-red-400" fill="currentColor" viewBox="0 0 20 20"><path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm1-11a1 1 0 10-2 0v3.586L7.707 9.293a1 1 0 00-1.414 1.414l3 3a1 1 0 001.414 0l3-3a1 1 0 00-1.414-1.414L11 10.586V7z" clip-rule="evenodd"></path></svg></span>
+                        <h4 class="text-lg font-semibold text-white">1. Stop Application</h4>
+                        <p class="text-sm text-gray-400">Take the old version completely offline. All users experience downtime. This step is critical for data integrity.</p>
+                    </div>
+                    <div class="mb-8 ml-8">
+                        <span class="absolute flex items-center justify-center w-6 h-6 bg-gray-700 rounded-full -left-3 ring-8 ring-gray-900"><svg class="w-3 h-3 text-red-400" fill="currentColor" viewBox="0 0 20 20"><path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-8.707l-3-3a1 1 0 00-1.414 0l-3 3a1 1 0 001.414 1.414L9 9.414V13a1 1 0 102 0V9.414l1.293 1.293a1 1 0 001.414-1.414z" clip-rule="evenodd"></path></svg></span>
+                        <h4 class="text-lg font-semibold text-white">2. Deploy New Version</h4>
+                        <p class="text-sm text-gray-400">Update servers, run database migration scripts, clear caches, and deploy all other components with the new code.</p>
+                    </div>
+                    <div class="ml-8">
+                        <span class="absolute flex items-center justify-center w-6 h-6 bg-gray-700 rounded-full -left-3 ring-8 ring-gray-900"><svg class="w-3 h-3 text-green-400" fill="currentColor" viewBox="0 0 20 20"><path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd"></path></svg></span>
+                        <h4 class="text-lg font-semibold text-white">3. Start & Verify</h4>
+                        <p class="text-sm text-gray-400">Bring the new version online. Perform critical smoke tests. Downtime ends once verified.</p>
+                    </div>
+                </div>
+            </div>
+            <div class="mt-8 bg-gray-800/50 p-6 rounded-2xl">
+                <h3 class="font-semibold text-xl text-white mb-4">Critical Considerations</h3>
+                <ul class="list-disc list-inside space-y-2 text-gray-300">
+                    <li><span class="font-semibold text-white">Rollback Plan:</span> The rollback is another Big Bang deployment of the old version. It must be well-rehearsed.</li>
+                    <li><span class="font-semibold text-white">User Communication:</span> Clear communication about the maintenance window is crucial for user trust.</li>
+                    <li><span class="font-semibold text-white">Data Migration:</span> Any database changes must be flawless and ideally reversible.</li>
+                </ul>
+            </div>
+        </div>
+
+        <div id="rolling" class="page-section">
+            <a href="#" class="inline-flex items-center gap-2 text-indigo-400 hover:text-indigo-300 mb-8">&larr; Back to all strategies</a>
+            <h2 class="text-4xl font-bold text-white">Rolling Deployment</h2>
+            <p class="mt-4 text-lg text-gray-400">This strategy updates an application with minimal downtime by incrementally updating a subset of servers at a time.</p>
+             <div class="mt-8 bg-gray-800/50 p-6 rounded-2xl">
+                <h3 class="font-semibold text-xl text-white mb-4">The "Wave" Approach</h3>
+                <p class="text-gray-300 mb-6">The core idea is to reduce risk by limiting the "blast radius" of a potential failure. By updating only a few servers at a time (a "wave" or "window"), most users are unaffected if a bug is introduced. The load balancer is key, as it directs traffic away from servers being updated.</p>
+                <h3 class="font-semibold text-xl text-white mb-4">Deployment Waves</h3>
+                <div class="space-y-4">
+                    <div class="flex items-center gap-4"><span class="font-bold text-purple-400 w-20">Wave 1</span><div class="flex-1 flex gap-2"><div class="h-8 w-1/4 bg-purple-500 rounded"></div><div class="h-8 w-1/4 bg-blue-500 rounded"></div><div class="h-8 w-1/4 bg-blue-500 rounded"></div><div class="h-8 w-1/4 bg-blue-500 rounded"></div></div></div>
+                    <div class="flex items-center gap-4"><span class="font-bold text-purple-400 w-20">Wave 2</span><div class="flex-1 flex gap-2"><div class="h-8 w-1/4 bg-purple-500 rounded"></div><div class="h-8 w-1/4 bg-purple-500 rounded"></div><div class="h-8 w-1/4 bg-blue-500 rounded"></div><div class="h-8 w-1/4 bg-blue-500 rounded"></div></div></div>
+                    <div class="flex items-center gap-4"><span class="font-bold text-purple-400 w-20">Complete</span><div class="flex-1 flex gap-2"><div class="h-8 w-full bg-purple-500 rounded"></div></div></div>
+                </div>
+            </div>
+            <div class="mt-8 bg-gray-800/50 p-6 rounded-2xl">
+                <h3 class="font-semibold text-xl text-white mb-4">Critical Considerations</h3>
+                <ul class="list-disc list-inside space-y-2 text-gray-300">
+                    <li><span class="font-semibold text-white">N-1 Compatibility:</span> Your system must support having two different versions (the new 'N' and the old 'N-1') running at the same time. This is the biggest challenge.</li>
+                    <li><span class="font-semibold text-white">Database & APIs:</span> The database schema and internal APIs must be backward-compatible to serve both old and new application versions.</li>
+                    <li><span class="font-semibold text-white">User Sessions:</span> Long-running user sessions can be problematic if a user starts on an old server and a later request hits a new server with breaking changes.</li>
+                </ul>
+            </div>
+        </div>
+        
+        <div id="blue-green" class="page-section">
+            <a href="#" class="inline-flex items-center gap-2 text-indigo-400 hover:text-indigo-300 mb-8">&larr; Back to all strategies</a>
+            <h2 class="text-4xl font-bold text-white">Blue/Green Deployment</h2>
+            <p class="mt-4 text-lg text-gray-400">This strategy eliminates downtime by maintaining two identical production environments, only one of which serves live traffic at any time.</p>
+            <div class="mt-8 bg-gray-800/50 p-6 rounded-2xl">
+                <h3 class="font-semibold text-xl text-white mb-4">The "Two Environments" Principle</h3>
+                <p class="text-gray-300 mb-6">This is about risk mitigation through isolation. The 'Green' environment is a perfect clone of the live 'Blue' one. You can deploy the new version to Green and run a full suite of integration, performance, and user acceptance tests against it without any impact on live users. The final step is a simple, fast router switch.</p>
+                <h3 class="font-semibold text-xl text-white mb-4">Traffic Flow</h3>
+                <div class="grid grid-cols-1 md:grid-cols-3 items-center gap-4 text-center">
+                    <div class="p-4 bg-blue-900/50 rounded-lg">
+                        <h4 class="font-bold text-blue-300">Blue Environment</h4>
+                        <p class="text-sm">Version 1.0 (Live)</p>
+                    </div>
+                    <div class="flex flex-col items-center">
+                        <p class="font-bold mb-2">Router</p>
+                        <svg xmlns="http://www.w3.org/2000/svg" class="h-12 w-12 text-gray-400" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M8 7h12m0 0l-4-4m4 4l-4 4m0 6H4m0 0l4 4m-4-4l4-4" /></svg>
+                        <p class="mt-2 text-sm text-gray-400">Switches traffic instantly</p>
+                    </div>
+                    <div class="p-4 bg-green-900/50 rounded-lg">
+                        <h4 class="font-bold text-green-300">Green Environment</h4>
+                        <p class="text-sm">Version 2.0 (Standby)</p>
+                    </div>
+                </div>
+            </div>
+             <div class="mt-8 bg-gray-800/50 p-6 rounded-2xl">
+                <h3 class="font-semibold text-xl text-white mb-4">Critical Considerations</h3>
+                <ul class="list-disc list-inside space-y-2 text-gray-300">
+                    <li><span class="font-semibold text-white">Cost:</span> You are effectively doubling your production infrastructure costs, which can be significant.</li>
+                    <li><span class="font-semibold text-white">Database Migrations:</span> This is the hardest part. How do you apply database changes? Strategies include keeping schemas backward-compatible, or using a shared, highly-available database that both environments can access.</li>
+                    <li><span class="font-semibold text-white">State Management:</span> Ensure external services and stateful components are handled correctly during the switch.</li>
+                </ul>
+            </div>
+        </div>
+
+        <div id="canary" class="page-section">
+            <a href="#" class="inline-flex items-center gap-2 text-indigo-400 hover:text-indigo-300 mb-8">&larr; Back to all strategies</a>
+            <h2 class="text-4xl font-bold text-white">Canary Deployment</h2>
+            <p class="mt-4 text-lg text-gray-400">The new version is released to a tiny subset of real users to test its performance in the wild before a wider rollout.</p>
+            <div class="mt-8 bg-gray-800/50 p-6 rounded-2xl">
+                <h3 class="font-semibold text-xl text-white mb-4">The "Safety First" Mentality</h3>
+                <p class="text-gray-300 mb-6">Canarying is about gaining ultimate confidence before a full release. By exposing the new version to a small percentage of real users (the "canaries"), you can measure its impact on both technical metrics (like errors and latency) and business metrics (like user engagement and conversion rates). It's the ultimate form of testing in production.</p>
+                <h3 class="font-semibold text-xl text-white mb-4">Progressive Traffic Rollout</h3>
+                <div class="flex items-end gap-4 h-48 p-4">
+                    <div class="flex-1 flex flex-col justify-end items-center h-full"><div class="w-full bg-blue-500" style="height: 99%;"></div><div class="w-full bg-yellow-400" style="height: 1%;"></div><p class="text-sm mt-2 font-bold">1% Canary</p></div>
+                    <div class="flex-1 flex flex-col justify-end items-center h-full"><div class="w-full bg-blue-500" style="height: 90%;"></div><div class="w-full bg-yellow-400" style="height: 10%;"></div><p class="text-sm mt-2 font-bold">10% Canary</p></div>
+                    <div class="flex-1 flex flex-col justify-end items-center h-full"><div class="w-full bg-blue-500" style="height: 50%;"></div><div class="w-full bg-yellow-400" style="height: 50%;"></div><p class="text-sm mt-2 font-bold">50% Canary</p></div>
+                    <div class="flex-1 flex flex-col justify-end items-center h-full"><div class="w-full bg-blue-500" style="height: 0%;"></div><div class="w-full bg-yellow-400" style="height: 100%;"></div><p class="text-sm mt-2 font-bold">100% Rollout</p></div>
+                </div>
+            </div>
+            <div class="mt-8 bg-gray-800/50 p-6 rounded-2xl">
+                <h3 class="font-semibold text-xl text-white mb-4">Critical Considerations</h3>
+                <ul class="list-disc list-inside space-y-2 text-gray-300">
+                    <li><span class="font-semibold text-white">Advanced Tooling:</span> This is non-negotiable. You need robust monitoring/observability platforms (e.g., Prometheus, Datadog), feature flagging systems, and sophisticated traffic management at your load balancer or service mesh layer.</li>
+                    <li><span class="font-semibold text-white">Defining "Success":</span> You must define clear, measurable goals beforehand. What error rate is acceptable? What impact on latency is okay?</li>
+                    <li><span class="font-semibold text-white">Session Affinity:</span> For a consistent user experience, you may need "sticky sessions" to ensure a user in the canary group stays on the canary version for their entire session.</li>
+                </ul>
+            </div>
+        </div>
+
+    </main>
+
+    <!-- Footer -->
+    <footer class="text-center py-10 mt-12 border-t border-gray-800">
+    <p class="text-gray-500">A learning resource by <a href="https://www.github.com/youxufkhan" class="underline hover:text-gray-300">youxufkhan</a> created using Gemini Pro.</p>
+</footer>
+
+    <script>
+        // This script handles the single-page navigation
+        document.addEventListener('DOMContentLoaded', function() {
+            const sections = document.querySelectorAll('.page-section');
+
+            function showPage(targetId) {
+                const cleanId = targetId.startsWith('#') ? targetId.substring(1) : targetId;
+                sections.forEach(section => section.classList.remove('active'));
+                const targetSection = document.getElementById(cleanId);
+                if (targetSection) {
+                    targetSection.classList.add('active');
+                } else {
+                    document.getElementById('strategy-grid').classList.add('active');
+                }
+                window.scrollTo(0, 0); // Scroll to top on page change
+            }
+
+            window.addEventListener('hashchange', () => showPage(window.location.hash || '#strategy-grid'));
+            showPage(window.location.hash || '#strategy-grid');
+        });
+    </script>
+
+</body>
+</html>
+
